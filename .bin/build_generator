@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/../generator"
+
+node scripts/gen_template.mjs
+../node_modules/.bin/tsc

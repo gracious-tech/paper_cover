@@ -1,0 +1,10 @@
+
+node_modules/
+dist/
+
+/.bin/nodejs
+/.bin/node
+/.bin/npm
+/.bin/npx
+
+/.bin/typst

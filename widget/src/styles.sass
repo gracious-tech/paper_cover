@@ -1,0 +1,131 @@
+
+// Global styles for the book cover generator widget
+
+// Reset all elements
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+// CSS custom properties
+:root
+    --c-bg:          #f5f5f7
+    --c-surface:     #ffffff
+    --c-border:      #d1d1d6
+    --c-border-soft: #e5e5ea
+    --c-text:        #1c1c1e
+    --c-muted:       #6e6e73
+    --c-accent:      #0071e3
+    --c-accent-h:    #0077ed
+    --c-danger:      #ff3b30
+    --c-ok:          #34c759
+    --radius:        8px
+    --sidebar-w:     320px
+
+// Base html and body styles
+html, body
+    height: 100%
+    overflow: hidden
+    font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif
+    color: var(--c-text)
+    background: var(--c-bg)
+
+// App shell — fills the viewport as a flex row
+#app
+    display: flex
+    height: 100vh
+    overflow: hidden
+
+// Form input base styles
+input[type="text"],
+input[type="number"],
+select,
+textarea
+    width: 100%
+    padding: 6px 9px
+    border: 1px solid var(--c-border)
+    border-radius: 6px
+    font: 12px/1.4 -apple-system, system-ui, sans-serif
+    color: var(--c-text)
+    background: var(--c-surface)
+    transition: border-color 0.15s, box-shadow 0.15s
+    -webkit-appearance: none
+
+    // Focus state
+    &:focus
+        outline: none
+        border-color: var(--c-accent)
+        box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15)
+
+// Textarea specific styles
+textarea
+    resize: vertical
+    font-family: ui-monospace, monospace
+    font-size: 11px
+
+// File input styling
+input[type="file"]
+    font-size: 11px
+    color: var(--c-muted)
+
+// Utility to hide elements
+.hidden
+    display: none !important
+
+// Primary action button
+.btn-primary
+    padding: 7px 18px
+    background: var(--c-accent)
+    color: #fff
+    border: none
+    border-radius: var(--radius)
+    font: 600 13px -apple-system, system-ui, sans-serif
+    cursor: pointer
+    white-space: nowrap
+    transition: background 0.15s
+
+    // Hover state (not when disabled)
+    &:hover:not(:disabled)
+        background: var(--c-accent-h)
+
+    // Disabled state
+    &:disabled
+        opacity: 0.45
+        cursor: not-allowed
+
+// Secondary action button / link
+.btn-secondary
+    padding: 7px 14px
+    background: transparent
+    color: var(--c-accent)
+    border: 1px solid var(--c-accent)
+    border-radius: var(--radius)
+    font: 500 13px -apple-system, system-ui, sans-serif
+    cursor: pointer
+    text-decoration: none
+    white-space: nowrap
+    transition: background 0.15s
+
+    // Hover state
+    &:hover
+        background: rgba(0, 113, 227, 0.06)
+
+// Status message with ok and error modifiers
+.status
+    font-size: 12px
+    color: var(--c-muted)
+    flex: 1
+    min-width: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+    // Success state
+    &.ok
+        color: var(--c-ok)
+
+    // Error state
+    &.error
+        color: var(--c-danger)
+
+

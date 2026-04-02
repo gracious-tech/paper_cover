@@ -1,0 +1,17 @@
+{
+    "name": "@paper/cover-generator-node",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch"
+    },
+    "dependencies": {
+        "@paper/cover-generator": "file:../generator",
+        "sharp": "^0.34.5"
+    },
+    "devDependencies": {
+    }
+}

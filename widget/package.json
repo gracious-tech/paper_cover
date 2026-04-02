@@ -1,0 +1,24 @@
+{
+    "name": "@paper/cover-ui",
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@iconify-json/lucide": "^1.2.101",
+        "@nuxt/ui": "^4.6.0",
+        "@paper/cover-3d": "file:../3d",
+        "@paper/cover-generator-web": "file:../generator-web",
+        "vue": "^3.5.31"
+    },
+    "devDependencies": {
+        "@myriaddreamin/typst-ts-renderer": "^0.7.0-rc2",
+        "@myriaddreamin/typst-ts-web-compiler": "^0.7.0-rc2",
+        "@vitejs/plugin-vue": "^6.0.5",
+        "pug": "^3.0.4",
+        "vite": "^8.0.3"
+    }
+}

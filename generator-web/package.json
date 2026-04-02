@@ -1,0 +1,19 @@
+{
+    "name": "@paper/cover-generator-web",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch"
+    },
+    "dependencies": {
+        "@myriaddreamin/typst-ts-renderer": "^0.7.0-rc2",
+        "@myriaddreamin/typst-ts-web-compiler": "^0.7.0-rc2",
+        "@myriaddreamin/typst.ts": "^0.7.0-rc2",
+        "@paper/cover-generator": "file:../generator"
+    },
+    "devDependencies": {
+    }
+}
