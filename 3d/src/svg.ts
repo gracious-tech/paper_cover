@@ -33,7 +33,6 @@ export async function svg_to_bitmap(svg:string, w_pt:number, h_pt:number):Promis
         })
 
 
-        console.log('made bitmap')
         return createImageBitmap(img)
     }
     finally {
