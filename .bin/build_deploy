@@ -3,7 +3,7 @@
 # Output: widget/dist/
 set -euo pipefail
 
-PROJECT_ROOT="$(dirname "$0")/.."
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BIN="$PROJECT_ROOT/.bin"
 
 echo "📦 Installing generator dependencies..."
